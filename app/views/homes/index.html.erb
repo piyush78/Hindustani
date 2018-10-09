@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<% will_paginate @home %>
+<h1>Index</h1>
+
+
+
+  <tbody>
+    <% @homes.each do |home| %>
+      <tr>
+        <td><p>
+          <strong>Name:</strong>
+          <%= home.Name %> <%= link_to 'Show Details', home %> <%= link_to 'Edit', edit_home_path(home) %> <%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p></td>
+
+        <td><p>
+          <strong>Aadhar:</strong>
+          <%= home.Aadhar %>
+        </p></td>
+
+        <td><p>
+          <strong>Dob:</strong>
+          <%= home.Dob %>
+        </p></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_home_path %>

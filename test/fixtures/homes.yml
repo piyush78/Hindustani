@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  index: MyString
+  Name: MyString
+  Aadhar: 1
+  Dob: 1
+  Father: MyString
+  Mother: MyString
+  Children: MyString
+
+two:
+  index: MyString
+  Name: MyString
+  Aadhar: 1
+  Dob: 1
+  Father: MyString
+  Mother: MyString
+  Children: MyString

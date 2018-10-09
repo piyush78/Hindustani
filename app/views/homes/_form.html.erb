@@ -1,0 +1,53 @@
+<%= form_with(model: home, local: true) do |form| %>
+<% will_paginate @home %>
+  <% if home.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(home.errors.count, "error") %> prohibited this home from being saved:</h2>
+
+      <ul>
+      <% home.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :index %>
+    <%= form.text_field :index %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Name %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Aadhar %>
+    <%= form.number_field :Aadhar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Dob %>
+    <%= form.number_field :Dob %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Father %>
+    <%= form.text_field :Father %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Mother %>
+    <%= form.text_field :Mother %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Children %>
+    <%= form.text_field :Children %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<% will_paginate @home %>
+<p>
+  <strong>Name:</strong>
+  <%= @home.Name %>
+</p>
+
+<p>
+  <strong>Aadhar:</strong>
+  <%= @home.Aadhar %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @home.Dob %>
+</p>
+
+<p>
+  <strong>Father:</strong>
+  <%= @home.Father %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @home.Mother %>
+</p>
+
+<p>
+  <strong>Children:</strong>
+  <%= @home.Children %>
+</p>
+
+<%= link_to 'Edit', edit_home_path(@home) %> |
+<%= link_to 'Back', homes_path %>
