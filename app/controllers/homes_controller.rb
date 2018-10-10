@@ -12,7 +12,17 @@ class HomesController < ApplicationController
     @home = Home.find_by(id: params[:id])
   end
 
+  def father_details
+     @home = Home.find_by(id: params[:id])
+  end
 
+  def mother_details
+     @home = Home.find_by(id: params[:id])
+  end
+
+  def children_details
+     @home = Home.find_by(id: params[:id])
+  end
   def new
     @home = Home.new
   end
