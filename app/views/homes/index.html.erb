@@ -6,7 +6,7 @@
       <tr>
         <td><p>
           <strong>Name:</strong>
-          <%= home.Name %> <%= link_to 'Show Details', home %> <%= link_to 'Edit', edit_home_path(home) %> <%= link_to 'Destroy', home, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= home.Name %>
         </p></td>
 
         <td><p>
@@ -19,11 +19,29 @@
           <%= home.Dob %>
         </p></td>
 
+        <p>
+          <strong>Father:</strong>
+          <%= home.Father %>
+           <%= link_to 'Show Details', details_path(id:home.id) %>
+
+        </p>
+
+        <p>
+          <strong>Mother:</strong>
+          <%= home.Mother %>
+          <%= link_to 'Show Details', details_path(id:home.id) %>
+        </p>
+
+        <p>
+          <strong>Children:</strong>
+          <%= home.Children %>
+          <%= link_to 'Show Details', details_path(id:home.id) %>
+
+        </p>
+
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New User', new_home_path %>
