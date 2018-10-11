@@ -4,7 +4,7 @@ class HomesController < ApplicationController
 
   WillPaginate.per_page = 10
   def index
-    @homes = Home.all
+    @homes = Home.all.paginate(:page => params[:page], :per_page => 10)
   end
 
 
@@ -27,6 +27,12 @@ class HomesController < ApplicationController
     @home = Home.new
   end
 
+  def create
+    @home = user
+      if @home.save
+         redirect_to @home, notice: 'user was successfully created.'
+      end
+  end
 
   def edit
   end
