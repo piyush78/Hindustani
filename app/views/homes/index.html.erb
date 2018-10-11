@@ -2,7 +2,7 @@
 
 <h1>Index</h1>
   <tbody>
-    <% @homes.each do |home| %>
+    <% @homes.presence && @homes.each do |home| %>
       <tr>
         <td><p>
           <strong>Name:</strong>
